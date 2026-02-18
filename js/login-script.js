@@ -12,10 +12,17 @@ document.getElementById("login-btn").addEventListener("click", () => {
     alert("Login Successful");
     setValue("mobile-input", "", true);
     setValue("pin-input", "", true);
-    document.getElementById("login").classList.add("hidden")
-    document.getElementById("home").classList.remove("hidden")
+    document.getElementById("login").classList.add("hidden");
+    document.getElementById("home").classList.remove("hidden");
+    document.title = "Home-Payoo-Mobile Banking";
   } else {
     alert("Login Failed");
     return;
   }
+});
+
+document.getElementById("logOut-btn").addEventListener("click", () => {
+  document.getElementById("login").classList.remove("hidden");
+  document.getElementById("home").classList.add("hidden");
+  document.title = "Login-Payoo-Mobile Banking";
 });
