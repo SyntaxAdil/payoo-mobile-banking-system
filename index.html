@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Payoo-Mobile Banking</title>
+    <!-- Fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- daisy + tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <style>
+      * {
+        font-family: "Outfit", sans-serif;
+      }
+      ::-webkit-inner-spin-button {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      class="bg-base-200 max-w-md min-h-screen mx-auto flex flex-col justify-center px-3 border border-neutral/10"
+    >
+      <div class="logo max-w-[230px] mx-auto mb-10">
+        <img src="./assets//Logo-full.png" alt="payoo logo" />
+      </div>
+
+      <div class="login-form">
+        <div
+          class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl px-2"
+        >
+          <div class="card-body">
+            <fieldset class="fieldset space-y-1">
+              <label class="label font-medium text-neutral text-base"
+                >Mobile Number</label
+              >
+              <input
+                id="mobile-input"
+                required
+                type="text"
+                minlength="1"
+                maxlength="11"
+                class="input rounded-full bg-base-200 border-0 outline-0 px-4 mb-3 text-base"
+                placeholder="Enter your number"
+              />
+              <label class="label font-medium text-neutral text-base"
+                >4 Digit Pin</label
+              >
+              <input
+                type="number"
+                required
+                id="pin-input"
+                class="input rounded-full bg-base-200 border-0 outline-0 px-4 text-base"
+                placeholder="Enter 4 Digit Pin"
+                minlength="1"
+                maxlength="4"
+              />
+              <button
+                id="login-btn"
+                class="btn btn-primary font-semibold rounded-full text-base mt-4"
+              >
+                Login
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <marquee
+        class="mt-20"
+        onmouseover="this.stop()"
+        onmouseout="this.start()"
+      >
+        Dummy Credintials: Mobile Number
+        <b class="text-primary">01319698855</b> & Pin:
+        <b class="text-primary">1234 </b> || Thank You.
+      </marquee>
+    </section>
+
+    <script src="js/login-script.js"></script>
+    <script src="js/machine.js"></script>
+  </body>
+</html>
