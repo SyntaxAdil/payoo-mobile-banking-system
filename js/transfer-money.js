@@ -26,3 +26,5 @@ document.getElementById("transfer-btn").addEventListener("click", () => {
   }
 
 });
+
+handleKeyEvent("#tarnsfer-money")

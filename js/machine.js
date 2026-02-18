@@ -61,7 +61,9 @@ const handleTabSection=(targetId)=>{
 // key event
 
 const handleKeyEvent=(container)=>{
+  if(!container) return
   const input=document.querySelectorAll(`${container} input`);
+  if(!input) return
   function handleEnter(e){
     if(e.key==="Enter"){
       document.querySelector(`${container} button`).click();
@@ -71,4 +73,9 @@ const handleKeyEvent=(container)=>{
   
 }
 
-handleKeyEvent(".section-container")
+handleKeyEvent("#add-money")
+handleKeyEvent("#cashout")
+handleKeyEvent("#tarnsfer-money")
+handleKeyEvent("#get-bonus")
+handleKeyEvent("#pay-bill")
+
