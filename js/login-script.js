@@ -12,7 +12,8 @@ document.getElementById("login-btn").addEventListener("click", () => {
     alert("Login Successful");
     setValue("mobile-input", "", true);
     setValue("pin-input", "", true);
-    window.location.assign("../pages/home.html");
+    document.getElementById("login").classList.add("hidden")
+    document.getElementById("home").classList.remove("hidden")
   } else {
     alert("Login Failed");
     return;
