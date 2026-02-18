@@ -57,3 +57,18 @@ const handleTabSection=(targetId)=>{
   const latestTab = "latest-payment";
   if (latestTab) handleTabSection(latestTab);
 });
+
+// key event
+
+const handleKeyEvent=(container)=>{
+  const input=document.querySelectorAll(`${container} input`);
+  function handleEnter(e){
+    if(e.key==="Enter"){
+      document.querySelector(`${container} button`).click();
+    }
+  }
+  input.forEach(i=>i.addEventListener("keydown",handleEnter));
+  
+}
+
+handleKeyEvent(".section-container")

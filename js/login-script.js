@@ -26,3 +26,5 @@ document.getElementById("logOut-btn").addEventListener("click", () => {
   document.getElementById("home").classList.add("hidden");
   document.title = "Login-Payoo-Mobile Banking";
 });
+
+handleKeyEvent(".login-form")
