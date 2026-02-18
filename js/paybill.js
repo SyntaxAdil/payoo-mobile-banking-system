@@ -20,8 +20,8 @@ if(!accountNumber.startsWith("payoo-")) {
     return
 }
   if (pinInput == "1234") {
-    alert("Amount Added Successful");
-    const newBalance = amountNumber + Number(balance);
+    alert("Payment Successful");
+    const newBalance =  Number(balance) -amountNumber;
     setValue("balance", newBalance);
     setValue("paybill-bank-input", "Select To Pay",true);
     setValue("paybill-biller-account-input", "",true);
