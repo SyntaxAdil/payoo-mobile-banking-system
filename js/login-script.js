@@ -12,7 +12,7 @@ document.getElementById("login-btn").addEventListener("click", () => {
     alert("Login Successful");
     setValue("mobile-input", "", true);
     setValue("pin-input", "", true);
-    window.location.assign("/home.html");
+    window.location.assign("./home.html");
   } else {
     alert("Login Failed");
     return;
