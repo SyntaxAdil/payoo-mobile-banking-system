@@ -5,7 +5,7 @@ document.getElementById("cashout-btn").addEventListener("click", () => {
   const pinInput = getValueFromInput("cashout-pin-input");
 
   if (!setError(agentNumber, 11, "Agent Number Must be 11 digits.")) return;
-  if (amountNumber <= 0) {
+  if (amountNumber <= 0 || amountNumber>Number(balance)) {
     alert("Enter a valid amount to procced");
     return;
   }

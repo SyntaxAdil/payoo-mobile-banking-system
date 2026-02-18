@@ -10,7 +10,7 @@ document.getElementById("add-money-btn").addEventListener("click", () => {
     return;
   }
   if (!setError(accountNumber, 11, "Account Number Must be 11 digits.")) return;
-  if (amountNumber > Number(balance) || amountNumber <= 0) {
+  if (!amountNumber) {
     alert("Enter a valid amount to procced");
     return;
   }
