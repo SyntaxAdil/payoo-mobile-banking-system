@@ -1,4 +1,3 @@
-
 const parentDiv = document.getElementById("latest-payment-carts-container");
 if(parentDiv.innerHTML.trim()===""){
   const p=document.createElement("p")

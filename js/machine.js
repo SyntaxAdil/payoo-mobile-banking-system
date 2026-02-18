@@ -32,18 +32,23 @@ const setError = (value, exactLength, message) => {
 };
 
 
-const btnGrp= document.querySelector(".btn-group");
 
-btnGrp.addEventListener("click",(e)=>{
-  const tabBtns=document.querySelectorAll(".btn-group button")
-  tabBtns.forEach(i=>i.classList.remove("btn-active"));
+const btnGrp = document.querySelector(".btn-group");
 
-  const target= e.target.dataset.target;
+btnGrp.addEventListener("click", (e) => {
 
-  e.target.classList.add("btn-active")
-  
-handleTabSection(target)
-})
+  const button = e.target.closest("button");
+  if (!button) return;
+
+  const tabBtns = document.querySelectorAll(".btn-group button");
+  tabBtns.forEach(i => i.classList.remove("btn-active"));
+
+  button.classList.add("btn-active");
+
+  const target = button.dataset.target;
+  handleTabSection(target);
+});
+
 
 const handleTabSection=(targetId)=>{
   const parentSction=document.querySelectorAll(".section-container section");
@@ -78,4 +83,7 @@ handleKeyEvent("#cashout")
 handleKeyEvent("#tarnsfer-money")
 handleKeyEvent("#get-bonus")
 handleKeyEvent("#pay-bill")
+
+
+
 
